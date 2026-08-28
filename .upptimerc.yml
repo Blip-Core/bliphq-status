@@ -11,6 +11,7 @@ sites:
 status-website:
   cname: status.bliphq.org
   # baseUrl: /bliphq-status # Add your repo slug here so relative paths resolve cleanly
+  baseUrl: /
   logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
   name: Upptime
   introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
