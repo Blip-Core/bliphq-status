@@ -9,8 +9,8 @@ sites:
     url: https://bezel.bliphq.org
 
 status-website:
-  # cname: status.bliphq.org
-  baseUrl: /bliphq-status # Add your repo slug here so relative paths resolve cleanly
+  cname: status.bliphq.org
+  # baseUrl: /bliphq-status # Add your repo slug here so relative paths resolve cleanly
   logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
   name: Upptime
   introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
@@ -20,30 +20,6 @@ status-website:
       href: /bliphq-status
     - title: GitHub
       href: https://github.com/$OWNER/$REPO
-
-  js: |-
-    (function() {
-      if (window.self !== window.top) {
-        function reportPathToParent() {
-          window.parent.postMessage({
-            type: 'URL_CHANGE',
-            pathname: window.location.pathname
-          }, 'https://status.bliphq.org');
-        }
-        reportPathToParent();
-        const originalPushState = history.pushState;
-        history.pushState = function() {
-          originalPushState.apply(this, arguments);
-          reportPathToParent();
-        };
-        const originalReplaceState = history.replaceState;
-        history.replaceState = function() {
-          originalReplaceState.apply(this, arguments);
-          reportPathToParent();
-        };
-        window.addEventListener('popstate', reportPathToParent);
-      }
-    })();
 
 # Upptime also supports notifications, assigning issues, and more
 # See https://upptime.js.org/docs/configuration
