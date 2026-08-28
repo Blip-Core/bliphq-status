@@ -13,14 +13,52 @@ status-website:
   # baseUrl: /bliphq-status # Add your repo slug here so relative paths resolve cleanly
   # baseUrl: /bliphq-status
   logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
+  name: Blip Status
+  # introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
+  # introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
   navbar:
     - title: Status
-      href: /bliphq-status
+      href: /
     - title: GitHub
       href: https://github.com/$OWNER/$REPO
+
+  js: |
+    window.addEventListener("DOMContentLoaded", () => {
+      // Define your different favicon URLs
+      const favicons = {
+        operational: "https://bliphq.org/assets/status/normal.svg",
+        degraded: "https://bliphq.org/assets/status/degraded.svg",
+        down: "https://bliphq.org/assets/status/down.svg"
+      };
+
+      function updateStateFavicon() {
+        const faviconLink = document.querySelector("link[rel*='icon']") || document.createElement('link');
+        faviconLink.rel = 'icon';
+
+        // Check Upptime's main header state or container class
+        const statusHeading = document.querySelector("h1, .status-title, .live-status");
+        if (!statusHeading) return;
+
+        const statusText = statusHeading.innerText.toLowerCase();
+
+        if (statusText.includes("all systems operational")) {
+          faviconLink.href = favicons.operational;
+        } else if (statusText.includes("degraded performance") || statusText.includes("partial outage")) {
+          faviconLink.href = favicons.degraded;
+        } else if (statusText.includes("major outage") || statusText.includes("down")) {
+          faviconLink.href = favicons.down;
+        }
+        
+        if (!document.querySelector("link[rel*='icon']")) {
+          document.head.appendChild(faviconLink);
+        }
+      }
+
+      // Run once on load and watch for live state updates via a MutationObserver
+      updateStateFavicon();
+      const observer = new MutationObserver(updateStateFavicon);
+      observer.observe(document.body, { childList: true, subtree: true });
+    });
 
 # Upptime also supports notifications, assigning issues, and more
 # See https://upptime.js.org/docs/configuration
