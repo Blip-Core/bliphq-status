@@ -32,7 +32,8 @@ status-website:
     function updateFavicon() {
       const isDown = document.querySelector('.down-active') !== null;
       const isDegraded = document.querySelector('.degraded') !== null;
-      let link = document.querySelector("link[rel*='icon']") || document.createElement('link'); link.type = 'image/x-icon';
+      document.querySelector("link[rel*='icon']").remove();
+      let link = document.createElement('link'); link.type = 'image/x-icon';
       link.rel = 'shortcut icon'; link.href = isDown ? 'https://bliphq.org/assets/status/down.svg' : isDegraded ? 'https://bliphq.org/assets/status/degraded.svg' : 'https://bliphq.org/assets/status/normal.svg';
       document.head.appendChild(link);
     }
