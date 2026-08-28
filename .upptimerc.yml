@@ -29,13 +29,14 @@ status-website:
       href: https://github.com/$OWNER/$REPO
 
   js: |
-    window.onload = function() {
+    function updateFavicon() {
       const isDown = document.querySelector('.down-active') !== null;
       const isDegraded = document.querySelector('.degraded') !== null;
       let link = document.querySelector("link[rel*='icon']") || document.createElement('link'); link.type = 'image/x-icon';
       link.rel = 'shortcut icon'; link.href = isDown ? 'https://bliphq.org/assets/status/down.svg' : isDegraded ? 'https://bliphq.org/assets/status/degraded.svg' : 'https://bliphq.org/assets/status/normal.svg';
       document.head.appendChild(link);
     }
+    setInterval(updateFavicon, 5000);
   css: |
     :root {
       --body-background-color: #f4f4f4;
