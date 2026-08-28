@@ -9,7 +9,7 @@ sites:
     url: https://bezel.bliphq.org
 
 status-website:
-  cname: status.bliphq.org
+  # cname: status.bliphq.org
   baseUrl: /bliphq-status # Add your repo slug here so relative paths resolve cleanly
   logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
   name: Upptime
