@@ -23,14 +23,38 @@ status-website:
       href: https://github.com/$OWNER/$REPO
 
   js: |
-    document.addEventListener('load', () => {
-      const isDown = document.querySelector('.down-active') !== null;
-      const isDegraded = document.querySelector('.degraded') !== null;        
-        let link = document.querySelector("link[rel*='icon']") || document.createElement('link');
-        link.type = 'image/x-icon';
-        link.rel = 'shortcut icon';
-        link.href = isDown ? 'https://bliphq.org/assets/status/down.svg' : isDegraded ? 'https://bliphq.org/assets/status/degraded.svg' : 'https://bliphq.org/assets/status/normal.svg';
-        document.getElementsByTagName('head')[0].appendChild(link);
-    });
+    (function() {
+      function updateFavicon() {
+        // Your exact condition checking logic
+        var isDown = document.querySelector('.down-active') !== null;
+        var isDegraded = document.querySelector('.degraded') !== null;
+        
+        var faviconUrl = 'https://bliphq.org/assets/status/normal.svg';
+        if (isDown) {
+          faviconUrl = 'https://bliphq.org/assets/status/down.svg';
+        } else if (isDegraded) {
+          faviconUrl = 'https://bliphq.org/assets/status/degraded.svg';
+        }
+
+        var link = document.querySelector("link[rel*='icon']");
+        if (!link) {
+          link = document.createElement('link');
+          document.getElementsByTagName('head')[0].appendChild(link);
+        }
+        
+        // Prevent the browser tab from flickering by only updating if the URL changed
+        if (link.getAttribute('href') !== faviconUrl) {
+          link.type = 'image/svg+xml';
+          link.rel = 'shortcut icon';
+          link.href = faviconUrl;
+        }
+      }
+
+      // Run immediately when injected
+      updateFavicon();
+      
+      // Check every 2 seconds to catch Upptime's async Svelte elements when they render
+      setInterval(updateFavicon, 2000);
+    })();
 # Upptime also supports notifications, assigning issues, and more
 # See https://upptime.js.org/docs/configuration
