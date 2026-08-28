@@ -18,6 +18,7 @@ status-website:
   # baseUrl: /bliphq-status # Add your repo slug here so relative paths resolve cleanly
   # baseUrl: /bliphq-status
   logoUrl: https://bliphq.org/assets/favicon.svg
+  faviconSvg: https://bliphq.org/assets/favicon.svg
   name: Blip Status
   # introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
   # introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
@@ -27,19 +28,41 @@ status-website:
     - title: GitHub
       href: https://github.com/$OWNER/$REPO
 
-  customFootHtml: |
-    <script>function updateFavicon() {
+  js: |
+    window.onload = function() {
       const isDown = document.querySelector('.down-active') !== null;
       const isDegraded = document.querySelector('.degraded') !== null;
       let link = document.querySelector("link[rel*='icon']") || document.createElement('link'); link.type = 'image/x-icon';
       link.rel = 'shortcut icon'; link.href = isDown ? 'https://bliphq.org/assets/status/down.svg' : isDegraded ? 'https://bliphq.org/assets/status/degraded.svg' : 'https://bliphq.org/assets/status/normal.svg';
       document.head.appendChild(link);
     }
+  css: |
+    :root {
+    --body-background-color: #f4f4f4;
+    --body-text-color: #545454;
+    --card-background-color: #ffffff;
+    --nav-background-color: #ffffff;
+    --nav-border-bottom-color: #89e0cf;
+    --nav-current-border-bottom-color: #1abc9c;
+    --card-border-color: #89e0cf;
+    --down-border-left-color: #eb3b5a;
+    --down-background-color: #6b1020;
+    --degraded-border-left-color: #f7b731;
+    --up-border-left-color: #20bf6b;
+    --tag-color: #002b29;
+    --tag-up-background-color: #20bf6b;
+    --tag-down-background-color: #eb3b5a;
+    --tag-degraded-background-color: #f7b731;
+    --change-background-color: #89e0cf;
+    --error-button-border-color: #1a46ad;
+    --error-button-background-color: #3867d6;
+    --error-button-color: #ffffff;
+    --submit-button-border-color: #1a46ad;
+    --submit-button-background-color: #3867d6;
+    --submit-button-color: #ffffff;
+    --graph-opacity: 1;
+    --graph-filter: none;
+  }
 
-    // Run immediately when injected
-    updateFavicon();
-    
-    // Check every 2 seconds to catch Upptime's async Svelte elements when they render
-    setInterval(updateFavicon, 2000);</script>
 # Upptime also supports notifications, assigning issues, and more
 # See https://upptime.js.org/docs/configuration
