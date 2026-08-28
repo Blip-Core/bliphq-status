@@ -23,7 +23,7 @@ status-website:
       href: https://github.com/$OWNER/$REPO
 
   js: |
-    window.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('load', () => {
       const isDown = document.querySelector('.down-active') !== null;
       const isDegraded = document.querySelector('.degraded') !== null;        
         let link = document.querySelector("link[rel*='icon']") || document.createElement('link');
@@ -31,6 +31,6 @@ status-website:
         link.rel = 'shortcut icon';
         link.href = isDown ? 'https://bliphq.org/assets/status/down.svg' : isDegraded ? 'https://bliphq.org/assets/status/degraded.svg' : 'https://bliphq.org/assets/status/normal.svg';
         document.getElementsByTagName('head')[0].appendChild(link);
-    })();
+    });
 # Upptime also supports notifications, assigning issues, and more
 # See https://upptime.js.org/docs/configuration
