@@ -17,9 +17,33 @@ status-website:
   introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
   navbar:
     - title: Status
-      href: /
+      href: /bliphq-status
     - title: GitHub
       href: https://github.com/$OWNER/$REPO
+
+  js: >
+  (function() {
+    if (window.self !== window.top) {
+      function reportPathToParent() {
+        window.parent.postMessage({
+          type: 'URL_CHANGE',
+          pathname: window.location.pathname
+        }, 'https://status.bliphq.org');
+      }
+      reportPathToParent();
+      const originalPushState = history.pushState;
+      history.pushState = function() {
+        originalPushState.apply(this, arguments);
+        reportPathToParent();
+      };
+      const originalReplaceState = history.replaceState;
+      history.replaceState = function() {
+        originalReplaceState.apply(this, arguments);
+        reportPathToParent();
+      };
+      window.addEventListener('popstate', reportPathToParent);
+    }
+  })();
 
 # Upptime also supports notifications, assigning issues, and more
 # See https://upptime.js.org/docs/configuration
