@@ -5,8 +5,13 @@ repo: bliphq-status # The name of this repository
 sites:
   - name: Home
     url: https://bliphq.org
+    icon: https://bliphq.org/assets/favicon.svg
   - name: Bezel
     url: https://bezel.bliphq.org
+    icon: https://bliphq.org/assets/favicon.svg
+  - name: Status
+    url: https://status.bliphq.org
+    icon: https://bliphq.org/assets/status/normal.svg
 
 status-website:
   cname: status.bliphq.org
@@ -28,7 +33,7 @@ status-website:
       const isDegraded = document.querySelector('.degraded') !== null;
       let link = document.querySelector("link[rel*='icon']") || document.createElement('link'); link.type = 'image/x-icon';
       link.rel = 'shortcut icon'; link.href = isDown ? 'https://bliphq.org/assets/status/down.svg' : isDegraded ? 'https://bliphq.org/assets/status/degraded.svg' : 'https://bliphq.org/assets/status/normal.svg';
-      document.getElementsByTagName('head')[0].appendChild(link);
+      document.head.appendChild(link);
     }
 
     // Run immediately when injected
