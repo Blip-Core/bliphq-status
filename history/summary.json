@@ -22,18 +22,20 @@
     "url": "https://bezel.bliphq.org",
     "icon": "https://bliphq.org/assets/favicon.svg",
     "slug": "bezel",
-    "status": "down",
-    "uptime": "100.00%",
-    "uptimeDay": "100.00%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "100.00%",
-    "time": 264,
-    "timeDay": 225,
-    "timeWeek": 264,
-    "timeMonth": 264,
-    "timeYear": 264,
-    "dailyMinutesDown": {}
+    "status": "up",
+    "uptime": "99.54%",
+    "uptimeDay": "98.60%",
+    "uptimeWeek": "99.54%",
+    "uptimeMonth": "99.54%",
+    "uptimeYear": "99.54%",
+    "time": 269,
+    "timeDay": 289,
+    "timeWeek": 269,
+    "timeMonth": 269,
+    "timeYear": 269,
+    "dailyMinutesDown": {
+      "2026-08-31": 20
+    }
   },
   {
     "name": "Status",
@@ -41,16 +43,18 @@
     "icon": "https://bliphq.org/assets/status/normal.svg",
     "slug": "status",
     "status": "up",
-    "uptime": "100.00%",
-    "uptimeDay": "100.00%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "100.00%",
+    "uptime": "99.52%",
+    "uptimeDay": "98.60%",
+    "uptimeWeek": "99.52%",
+    "uptimeMonth": "99.52%",
+    "uptimeYear": "99.52%",
     "time": 219,
     "timeDay": 191,
     "timeWeek": 219,
     "timeMonth": 219,
     "timeYear": 219,
-    "dailyMinutesDown": {}
+    "dailyMinutesDown": {
+      "2026-08-31": 20
+    }
   }
 ]
