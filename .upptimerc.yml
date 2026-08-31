@@ -48,7 +48,7 @@ status-website:
       --nav-current-border-bottom-color: #1abc9c;
       --card-border-color: #89e0cf;
       --down-border-left-color: #eb3b5a;
-      --down-background-color: #6b1020;
+      --down-background-color: #ffbdc8;
       --degraded-border-left-color: #f7b731;
       --up-border-left-color: #20bf6b;
       --tag-color: #002b29;
