@@ -5,18 +5,18 @@
     "icon": "https://bliphq.org/assets/favicon.svg",
     "slug": "home",
     "status": "down",
-    "uptime": "99.99%",
-    "uptimeDay": "99.98%",
-    "uptimeWeek": "99.99%",
-    "uptimeMonth": "99.99%",
-    "uptimeYear": "99.99%",
-    "time": 295,
-    "timeDay": 235,
-    "timeWeek": 295,
-    "timeMonth": 295,
-    "timeYear": 295,
+    "uptime": "99.90%",
+    "uptimeDay": "99.69%",
+    "uptimeWeek": "99.90%",
+    "uptimeMonth": "99.90%",
+    "uptimeYear": "99.90%",
+    "time": 301,
+    "timeDay": 302,
+    "timeWeek": 301,
+    "timeMonth": 301,
+    "timeYear": 301,
     "dailyMinutesDown": {
-      "2026-08-31": 0
+      "2026-08-31": 4
     }
   },
   {
@@ -25,18 +25,18 @@
     "icon": "https://bliphq.org/assets/favicon.svg",
     "slug": "bezel",
     "status": "down",
-    "uptime": "99.55%",
-    "uptimeDay": "98.60%",
-    "uptimeWeek": "99.55%",
-    "uptimeMonth": "99.55%",
-    "uptimeYear": "99.55%",
+    "uptime": "99.46%",
+    "uptimeDay": "98.30%",
+    "uptimeWeek": "99.46%",
+    "uptimeMonth": "99.46%",
+    "uptimeYear": "99.46%",
     "time": 271,
-    "timeDay": 295,
+    "timeDay": 292,
     "timeWeek": 271,
     "timeMonth": 271,
     "timeYear": 271,
     "dailyMinutesDown": {
-      "2026-08-31": 20
+      "2026-08-31": 24
     }
   },
   {
@@ -45,18 +45,18 @@
     "icon": "https://bliphq.org/assets/status/normal.svg",
     "slug": "status",
     "status": "up",
-    "uptime": "99.52%",
-    "uptimeDay": "98.58%",
-    "uptimeWeek": "99.52%",
-    "uptimeMonth": "99.52%",
-    "uptimeYear": "99.52%",
-    "time": 228,
-    "timeDay": 253,
-    "timeWeek": 228,
-    "timeMonth": 228,
-    "timeYear": 228,
+    "uptime": "99.42%",
+    "uptimeDay": "98.29%",
+    "uptimeWeek": "99.42%",
+    "uptimeMonth": "99.42%",
+    "uptimeYear": "99.42%",
+    "time": 220,
+    "timeDay": 215,
+    "timeWeek": 220,
+    "timeMonth": 220,
+    "timeYear": 220,
     "dailyMinutesDown": {
-      "2026-08-31": 20
+      "2026-08-31": 25
     }
   }
 ]
