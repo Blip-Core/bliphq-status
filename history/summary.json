@@ -10,11 +10,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "99.97%",
-    "time": 310,
-    "timeDay": 327,
-    "timeWeek": 282,
-    "timeMonth": 306,
-    "timeYear": 310,
+    "time": 317,
+    "timeDay": 793,
+    "timeWeek": 350,
+    "timeMonth": 324,
+    "timeYear": 317,
     "dailyMinutesDown": {
       "2026-08-31": 18
     }
@@ -25,16 +25,16 @@
     "icon": "https://bliphq.org/assets/favicon.svg",
     "slug": "bezel",
     "status": "up",
-    "uptime": "99.93%",
+    "uptime": "99.94%",
     "uptimeDay": "100.00%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
-    "uptimeYear": "99.93%",
-    "time": 277,
-    "timeDay": 355,
-    "timeWeek": 256,
-    "timeMonth": 284,
-    "timeYear": 277,
+    "uptimeYear": "99.94%",
+    "time": 278,
+    "timeDay": 346,
+    "timeWeek": 282,
+    "timeMonth": 289,
+    "timeYear": 278,
     "dailyMinutesDown": {
       "2026-08-31": 38
     }
@@ -50,11 +50,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "99.93%",
-    "time": 248,
-    "timeDay": 164,
-    "timeWeek": 250,
-    "timeMonth": 257,
-    "timeYear": 248,
+    "time": 246,
+    "timeDay": 157,
+    "timeWeek": 197,
+    "timeMonth": 261,
+    "timeYear": 246,
     "dailyMinutesDown": {
       "2026-08-31": 38
     }
