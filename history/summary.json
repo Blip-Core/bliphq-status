@@ -5,15 +5,15 @@
     "icon": "https://bliphq.org/assets/favicon.svg",
     "slug": "home",
     "status": "up",
-    "uptime": "99.98%",
+    "uptime": "99.99%",
     "uptimeDay": "100.00%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
-    "uptimeYear": "99.98%",
+    "uptimeYear": "99.99%",
     "time": 321,
-    "timeDay": 303,
-    "timeWeek": 331,
-    "timeMonth": 335,
+    "timeDay": 293,
+    "timeWeek": 350,
+    "timeMonth": 333,
     "timeYear": 321,
     "dailyMinutesDown": {
       "2026-08-31": 18
@@ -30,11 +30,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "99.97%",
-    "time": 285,
-    "timeDay": 179,
-    "timeWeek": 231,
-    "timeMonth": 287,
-    "timeYear": 285,
+    "time": 284,
+    "timeDay": 246,
+    "timeWeek": 240,
+    "timeMonth": 285,
+    "timeYear": 284,
     "dailyMinutesDown": {
       "2026-08-31": 38
     }
@@ -51,9 +51,9 @@
     "uptimeMonth": "100.00%",
     "uptimeYear": "99.97%",
     "time": 239,
-    "timeDay": 116,
-    "timeWeek": 220,
-    "timeMonth": 231,
+    "timeDay": 169,
+    "timeWeek": 236,
+    "timeMonth": 229,
     "timeYear": 239,
     "dailyMinutesDown": {
       "2026-08-31": 38
